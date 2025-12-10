@@ -76,7 +76,7 @@ plt.savefig(f"{wheretosave}{"/Pumpkin_Boxplot.png"}")
 #Close plots again, set up FacetGrid parameters to define how each box plot should be divided (based on variety), generate faceted boxplot, apply aesthetics.
 plt.close()
 pumpkinsfacetgrid = sns.FacetGrid(filteredpumpkins,col="variety",col_wrap=5)
-pumpkinsfacetboxplot = pumpkinsfacetgrid.map(sns.boxplot,"country","weight_kg")
+pumpkinsfacetboxplot = pumpkinsfacetgrid.map(sns.boxplot,"country","weight_kg",order=["Japan","Italy","Canada"])
 pumpkinsfacetboxplot.set(xlabel="Country of origin",ylabel="Pumpkin weight (kg)")
 plt.subplots_adjust(top=0.9)
 pumpkinsfacetboxplot.figure.suptitle("Faceted boxplots, showing data separated by\nboth variety and country of origin")
