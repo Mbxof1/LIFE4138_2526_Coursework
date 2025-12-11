@@ -50,7 +50,7 @@ plt.savefig(f"{wheretosave}{"/Pumpkins_Est_Vs_Act.png"}")
 #Filters pumpkins to contain individuals from only 3 countries, then saves as a CSV file in a directory the user chooses.
 filteredpumpkins = pumpkins[pumpkins["country"].isin(["Japan","Canada","Italy"])]
 wheretosave = askdirectory(title="Select a directory for the filtered .csv to be saved in")
-filteredpumpkins.to_csv(f"{wheretosave}{"/Filtered_Pumpkins.csv"}")
+filteredpumpkins.to_csv(f"{wheretosave}{"/pumpkins_filtered.csv"}")
 
 #Summarizes the filtered dataset based on provided requirements.
 #Calculates the mean weights of the pumpkins based on the country they came from. Outputs full dataset, then states which country had the highest mean.
